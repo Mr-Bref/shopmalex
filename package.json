@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-use-cart": "^1.13.0"
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "html-loader": "^5.0.0"
   }
 }
