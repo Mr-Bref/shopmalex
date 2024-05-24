@@ -118,7 +118,7 @@ function NavBottom() {
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-1">
+                                    <div className="col-lg-1">
                                         <button type="submit">
                                             <i class="flaticon-searching">
                                             </i>
@@ -129,24 +129,6 @@ function NavBottom() {
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="nav-user">
-                            <ul>
-                                <li class="user-icon">
-                                    <i class="lar la-user">
-                                    </i>
-                                </li>
-                                <li>
-                                    <a href="register.html">
-                                        S&rsquo; inscrire
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="log-in.html">
-                                        Se connecter
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>

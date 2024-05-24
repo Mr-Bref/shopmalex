@@ -16,6 +16,8 @@ import AllScript from "./components/AllScript";
 import MainNav from "./components/MainNav";
 import FooterArea from "./components/FooterArea";
 import CardProviderWrapper from "./components/CardProviderWrapper";
+import { AuthProvider } from '../contexts/AuthContext';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,11 +31,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CardProviderWrapper>
-          <MainNav />
-          {children}
-          <FooterArea />
-        </CardProviderWrapper>
+        <AuthProvider>
+          <CardProviderWrapper>
+            <MainNav />
+            {children}
+            <FooterArea />
+          </CardProviderWrapper>
+        </AuthProvider>
         <AllScript />
       </body>
     </html>

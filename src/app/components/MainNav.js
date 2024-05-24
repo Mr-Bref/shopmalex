@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link';
 import { useCart } from "react-use-cart";
+import useAuth from '@/hooks/useAuth';
 
 const itemsInfo = [
     {
@@ -19,13 +20,15 @@ const itemsInfo = [
         url: '/categories'
     },
     {
-        name: 'Contact Nous',
+        name: 'Contactez Nous',
         url: 'contactUs'
     }
 ];
 
 function MainNav() {
     const [selectedNavItem, setSelectedNavItem] = useState('')
+    const { user, logout } = useAuth();
+
     const { totalUniqueItems } = useCart();
 
 
@@ -33,8 +36,8 @@ function MainNav() {
         <><div className="main-nav">
             <div className="container">
                 <nav className="navbar navbar-expand-md navbar-light">
-                    <Link className="navbar-brand" href="/">
-                        <Image width={200} height={200} src="/images/logo.png" alt="Logo" />
+                    <Link className="navbar-brand" href="/" style={{ color: "black" }}>
+                        Shop<span style={{ color: "orange" }}>Ma</span>lex
                     </Link>
                     <div
                         className="collapse navbar-collapse mean-menu"
@@ -59,6 +62,28 @@ function MainNav() {
                         <div className="nav-side d-display">
                             <ul className="nav-side-item">
                                 <li>
+                                    <span>{user ? user.email : ''}
+                                        {
+                                            user ? (
+                                                <button className='btn' onClick={logout}>Logout</button>
+                                            ) : (
+                                                <span className='container mt-3'>
+                                                    <span className='row'>
+                                                        <span className='col center'>
+                                                            <span className='btn' type='button' >
+                                                                <Link href="/register">S&rsquo; inscrire</Link>
+                                                            </span>
+                                                            <span className='btn' type='button' >
+                                                                <Link href="/login">Se connecter</Link>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            )
+                                        }
+                                    </span>
+                                </li>
+                                <li>
                                     <Link href="#" className="cart-btn">
                                         <i className="flaticon-envelope"></i>
                                         <span>1</span>
@@ -80,3 +105,6 @@ function MainNav() {
 }
 
 export default MainNav
+
+
+
