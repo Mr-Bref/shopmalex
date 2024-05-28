@@ -185,12 +185,7 @@ export default function Home() {
                     </a>
                     <div className="flash-tag"><b>50%</b>Off</div>
                     <i className="las la-heart"></i>
-                    <div id="timer">
-                      <div id="days"></div>
-                      <div id="hours"></div>
-                      <div id="minutes"></div>
-                      <div id="seconds"></div>
-                    </div>
+
                   </div>
                   <div className="content">
                     <h3><a href="shop-details.html">Oil Pack</a></h3>

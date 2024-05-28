@@ -79,7 +79,8 @@ export default function Login() {
                                                         name="password"
                                                         placeholder="Mot de passe"
                                                         onChange={handleChange}
-                                                        required className="form-control"
+                                                        required
+                                                        className="form-control"
                                                         type="password"
                                                     />
                                                 </div>

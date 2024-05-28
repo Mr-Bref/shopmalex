@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link';
 import { useCart } from "react-use-cart";
@@ -60,7 +59,7 @@ function MainNav() {
                             ))}
                         </ul>
                         <div className="nav-side d-display">
-                            <ul className="nav-side-item">
+                            <ul className="nav-side-item" id='right-nave-items'>
                                 <li>
                                     <span>{user ? user.email : ''}
                                         {

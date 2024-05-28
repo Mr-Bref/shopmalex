@@ -5,7 +5,7 @@ useCart
 function AddToCartButton({ item }) {
     const { addItem } = useCart()
     return (
-        <span className='add-card' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: "pointer" }}><i className="las la-plus" onClick={() => addItem(item)}></i></span>
+        <span className='add-card' onClick={() => addItem(item)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: "pointer" }}><i className="las la-plus" ></i></span>
     )
 }
 

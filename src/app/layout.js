@@ -17,7 +17,7 @@ import MainNav from "./components/MainNav";
 import FooterArea from "./components/FooterArea";
 import CardProviderWrapper from "./components/CardProviderWrapper";
 import { AuthProvider } from '../contexts/AuthContext';
-
+import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +28,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const headersList = headers()
+  const hostname = headersList.get('x-forwarded-host')
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -38,7 +41,7 @@ export default function RootLayout({ children }) {
             <FooterArea />
           </CardProviderWrapper>
         </AuthProvider>
-        <AllScript />
+        <AllScript hostname={hostname} />
       </body>
     </html>
   );

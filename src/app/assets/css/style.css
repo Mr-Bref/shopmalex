@@ -533,6 +533,12 @@ Top Header End
 /*=================================
 Navbar Area
 ====================================*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .main-nav {
   background-color: #ffffff;
   top: 0;

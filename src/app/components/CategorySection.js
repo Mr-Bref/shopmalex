@@ -1,6 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
-import AddToCardButton from './AddToCardButton';
+import ProductCardC from './ProductCardC';
+
+
 
 const CategorySection = ({ title, products }) => {
     return (
@@ -13,24 +14,7 @@ const CategorySection = ({ title, products }) => {
                 <div className="row pt-45">
                     {products.map((product, index) => (
                         <div key={index} className="col-lg-4 col-sm-6">
-                            <div className="product-card">
-                                <div className="product-card-img">
-                                    <a href={product.detailsUrl}>
-                                        <Image width={200} height={200} src={product.imageUrl} alt={product.name} />
-                                    </a>
-                                </div>
-                                <div className="content">
-                                    <h3><a href={product.detailsUrl}>{product.name}</a></h3>
-                                    <div className="rating-tag">
-                                        <i className="las la-star"></i>
-                                        ({product.rating})
-                                    </div>
-                                    <p>{product.category}</p>
-                                    <span>${product.price}</span>
-                                    <AddToCardButton item={product} />
-                                </div>
-                            </div>
-
+                            <ProductCardC product={product} />
                         </div>
                     ))}
                 </div>

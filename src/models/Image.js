@@ -25,5 +25,6 @@ const Image = sequelize.define('Image', {
 });
 
 Image.belongsTo(Produit, { foreignKey: 'idprod' });
+Produit.hasMany(Image, { foreignKey: 'idprod' })
 
 export default Image;

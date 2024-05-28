@@ -1,65 +1,80 @@
 'use client'
-import React from 'react'
 import Script from 'next/script'
 
-function AllScript() {
+function AllScript({ hostname }) {
+
+    const baseurl = `../assets/js/`
     return (
         <>
             <Script
-                src="../assets/js/jquery-3.5.1.slim.min.js"
+                src={`${baseurl}jquery-3.5.1.slim.min.js`}
                 strategy="afterInteractive"
+                id='jquery'
             />
             <Script
-                src="../assets/js/bootstrap.bundle.min.js"
+                src={`${baseurl}bootstrap.bundle.min.js`}
                 strategy="afterInteractive"
+                id='bootdtrap'
             />
             <Script
-                src="../assets/js/owl.carousel.min.js"
+                src={`${baseurl}owl.carousel.min.js`}
                 strategy="afterInteractive"
+                id='owlcarousel'
             />
             <Script
-                src="../assets/js/jquery.magnific-popup.min.js"
+                src={`${baseurl}jquery.magnific-popup.min.js`}
                 strategy="afterInteractive"
+                id='jquery-popup'
             />
             <Script
-                src="../assets/js/jquery.nice-select.min.js"
-                strategy="afterInteractive"
+                src={`${baseurl}jquery.nice-select.min.js`}
+
+                id='niceselect'
             />
             <Script
-                src="../assets/js/wow.min.js"
+                src={`${baseurl}wow.min.js`}
                 strategy="afterInteractive"
+                id='wowmin'
             />
             <Script
-                src="../assets/js/meanmenu.js"
+                src={`${baseurl}meanmenu.js`}
                 strategy="afterInteractive"
+                id='meanmenu'
             />
             <Script
-                src="../assets/js/slick.min.js"
+                src={`${baseurl}slick.min.js`}
                 strategy="afterInteractive"
+                id='slick'
             />
             <Script
-                src="../assets/js/jquery.ajaxchimp.min.js"
+                src={`${baseurl}jquery.ajaxchimp.min.js`}
                 strategy="afterInteractive"
+                className='ajaxchimp'
             />
             <Script
-                src="../assets/js/form-validator.min.js"
+                src={`${baseurl}form-validator.min.js`}
                 strategy="afterInteractive"
+                id='form-validator'
             />
             <Script
-                src="../assets/js/jquery.validate.js"
+                src={`${baseurl}jquery.validate.js`}
                 strategy="afterInteractive"
+                id='validate'
             />
             <Script
-                src="../assets/js/jquery-ui.min.js"
+                src={`${baseurl}jquery-ui.min.js`}
                 strategy="afterInteractive"
+                id='jqueryiui'
             />
             <Script
-                src="../assets/js/mixitup.min.js"
+                src={`${baseurl}mixitup.min.js`}
                 strategy="afterInteractive"
+                id='mixitup'
             />
             <Script
-                src="../assets/js/custom.js"
+                src={`${baseurl}custom.js`}
                 strategy="afterInteractive"
+                id='customjs'
             />
         </>
     )

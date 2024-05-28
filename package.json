@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sync": "next src/lib/initDB.js"
+    "sync": "node src/lib/initDB.js",
+    "feedDB": "node src/lib/feedDB.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -16,8 +17,10 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-slick": "^0.30.2",
     "react-use-cart": "^1.13.0",
-    "sequelize": "^6.37.3"
+    "sequelize": "^6.37.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8",

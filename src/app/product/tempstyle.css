@@ -1,0 +1,25 @@
+.slick-dots.slick-thumb {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots.slick-thumb li {
+  width: auto;
+}
+
+.slick-dots.slick-thumb li img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+.slider-container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.slider-ctainer {
+  min-height: 80vh;
+}
+.slick-list {
+  height: auto;
+}

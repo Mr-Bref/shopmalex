@@ -11,22 +11,25 @@ function CartTable() {
     console.log(items, isEmpty)
 
     return (
-        <><table className="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Unit Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                {isEmpty === true ? <span>No items added yet</span> : items.map((product, index) => (
-                    <CartProductRow key={index} {...product} />
-                ))}
-            </tbody>
-        </table></>
+        <div className="cart-table table-responsive">
+
+            <table className="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {isEmpty === true ? <tr><td>No item</td></tr> : items.map((product, index) => (
+                        <CartProductRow key={index} {...product} />
+                    ))}
+                </tbody>
+            </table>
+        </div>
     )
 }
 

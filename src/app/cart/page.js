@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import CartTable from '../components/CartTable'
@@ -30,9 +30,8 @@ function page() {
                         <div className="col-lg-12 col-md-12">
                             <form>
                                 <div className="cart-wraps">
-                                    <div className="cart-table table-responsive">
-                                        <CartTable />
-                                    </div>
+                                    <CartTable />
+
                                     <div className="cart-buttons">
                                         <div className="row align-items-center">
                                             <div className="col-lg-7 col-sm-7 col-md-7">

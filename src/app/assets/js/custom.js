@@ -113,7 +113,7 @@
                 dots: true
             }
         }],
-        customPaging: function (slider, i) { return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>'; }
+        customPaging: function (slider, i) { return '<button className="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>'; }
     });
 
     // Range Slider
@@ -200,7 +200,7 @@
     });
 
     // Back To Top
-    $('body').append("<div class='go-top'><i class='las la-angle-double-up'></i></div>");
+    $('body').append("<div className='go-top'><i className='las la-angle-double-up'></i></div>");
     $(window).on('scroll', function () {
         var scrolled = $(window).scrollTop();
         if (scrolled > 600) $('.go-top').addClass('active');
@@ -231,7 +231,7 @@
         $("#minutes").html(minutes + "<span>Minutes</span>");
         $("#seconds").html(seconds + "<span>Seconds</span>");
     }
-    setInterval(function () { makeTimer(); }, 300);
+    // setInterval(function () { makeTimer(); }, 300);
 
     // Subscribe form
     $(".newsletter-form").validator().on("submit", function (event) {

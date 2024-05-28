@@ -2,24 +2,24 @@ import React from 'react'
 
 function WorkArea() {
     return (
-        <><div class="work-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title">
+        <><div className="work-area pt-100 pb-70">
+            <div className="container">
+                <div className="section-title">
                     <h2>
                         How It Works
                     </h2>
-                    <a class="view-btn" href="#">
+                    <a className="view-btn" href="#">
                         View All
                     </a>
                 </div>
-                <div class="row pt-45">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="work-card">
-                            <div class="number">
+                <div className="row pt-45">
+                    <div className="col-lg-4 col-sm-6">
+                        <div className="work-card">
+                            <div className="number">
                                 1
                             </div>
-                            <div class="work-icon">
-                                <i class="flaticon-online-order">
+                            <div className="work-icon">
+                                <i className="flaticon-online-order">
                                 </i>
                                 <h3>
                                     Order
@@ -31,13 +31,13 @@ function WorkArea() {
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="work-card">
-                            <div class="number">
+                    <div className="col-lg-4 col-sm-6">
+                        <div className="work-card">
+                            <div className="number">
                                 2
                             </div>
-                            <div class="work-icon">
-                                <i class="flaticon-grocery">
+                            <div className="work-icon">
+                                <i className="flaticon-grocery">
                                 </i>
                                 <h3>
                                     Assistant
@@ -49,13 +49,13 @@ function WorkArea() {
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 offset-lg-0 offset-sm-3">
-                        <div class="work-card">
-                            <div class="number">
+                    <div className="col-lg-4 col-sm-6 offset-lg-0 offset-sm-3">
+                        <div className="work-card">
+                            <div className="number">
                                 3
                             </div>
-                            <div class="work-icon">
-                                <i class="flaticon-delivery-truck">
+                            <div className="work-icon">
+                                <i className="flaticon-delivery-truck">
                                 </i>
                                 <h3>
                                     Deliver

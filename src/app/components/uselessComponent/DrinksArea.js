@@ -2,33 +2,33 @@ import React from 'react'
 import Image from 'next/image'
 function DrinksArea() {
     return (
-        <><div class="drinks-area pb-70">
-            <div class="container">
-                <div class="section-title">
+        <><div className="drinks-area pb-70">
+            <div className="container">
+                <div className="section-title">
                     <h2>
                         Drink Products
                     </h2>
-                    <a class="view-btn" href="#">
+                    <a className="view-btn" href="#">
                         View More
                     </a>
                 </div>
-                <div class="row pt-45">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-card">
-                            <div class="product-card-img">
+                <div className="row pt-45">
+                    <div className="col-lg-3 col-sm-6">
+                        <div className="product-card">
+                            <div className="product-card-img">
                                 <a href="shop-details.html">
                                     <Image height={100} alt="image" src="/images/drinks-product/drinks-img1.png" width={100} />
 
                                 </a>
                             </div>
-                            <div class="content">
+                            <div className="content">
                                 <h3>
                                     <a href="shop-details.html">
                                         Pepsi Can
                                     </a>
                                 </h3>
-                                <div class="rating-tag">
-                                    <i class="las la-star">
+                                <div className="rating-tag">
+                                    <i className="las la-star">
                                     </i>
                                     (4.5)
                                 </div>
@@ -38,29 +38,29 @@ function DrinksArea() {
                                 <span>
                                     $200
                                 </span>
-                                <a class="add-card" href="#">
-                                    <i class="las la-plus">
+                                <a className="add-card" href="#">
+                                    <i className="las la-plus">
                                     </i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-card">
-                            <div class="product-card-img">
+                    <div className="col-lg-3 col-sm-6">
+                        <div className="product-card">
+                            <div className="product-card-img">
                                 <a href="shop-details.html">
                                     <Image height={100} alt="image" src="/images/drinks-product/drinks-img2.png" width={100} />
 
                                 </a>
                             </div>
-                            <div class="content">
+                            <div className="content">
                                 <h3>
                                     <a href="shop-details.html">
                                         Water Pack
                                     </a>
                                 </h3>
-                                <div class="rating-tag">
-                                    <i class="las la-star">
+                                <div className="rating-tag">
+                                    <i className="las la-star">
                                     </i>
                                     (4.2)
                                 </div>
@@ -70,29 +70,29 @@ function DrinksArea() {
                                 <span>
                                     $20
                                 </span>
-                                <a class="add-card" href="#">
-                                    <i class="las la-plus">
+                                <a className="add-card" href="#">
+                                    <i className="las la-plus">
                                     </i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-card">
-                            <div class="product-card-img">
+                    <div className="col-lg-3 col-sm-6">
+                        <div className="product-card">
+                            <div className="product-card-img">
                                 <a href="shop-details.html">
                                     <Image height={100} alt="image" src="/images/drinks-product/drinks-img3.png" width={100} />
 
                                 </a>
                             </div>
-                            <div class="content">
+                            <div className="content">
                                 <h3>
                                     <a href="shop-details.html">
                                         Water Bottle
                                     </a>
                                 </h3>
-                                <div class="rating-tag">
-                                    <i class="las la-star">
+                                <div className="rating-tag">
+                                    <i className="las la-star">
                                     </i>
                                     (4.7)
                                 </div>
@@ -102,29 +102,29 @@ function DrinksArea() {
                                 <span>
                                     $30
                                 </span>
-                                <a class="add-card" href="#">
-                                    <i class="las la-plus">
+                                <a className="add-card" href="#">
+                                    <i className="las la-plus">
                                     </i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-card">
-                            <div class="product-card-img">
+                    <div className="col-lg-3 col-sm-6">
+                        <div className="product-card">
+                            <div className="product-card-img">
                                 <a href="shop-details.html">
                                     <Image height={100} alt="image" src="/images/drinks-product/drinks-img4.png" width={100} />
 
                                 </a>
                             </div>
-                            <div class="content">
+                            <div className="content">
                                 <h3>
                                     <a href="shop-details.html">
                                         Can Package
                                     </a>
                                 </h3>
-                                <div class="rating-tag">
-                                    <i class="las la-star">
+                                <div className="rating-tag">
+                                    <i className="las la-star">
                                     </i>
                                     (4.8)
                                 </div>
@@ -134,8 +134,8 @@ function DrinksArea() {
                                 <span>
                                     $50
                                 </span>
-                                <a class="add-card" href="#">
-                                    <i class="las la-plus">
+                                <a className="add-card" href="#">
+                                    <i className="las la-plus">
                                     </i>
                                 </a>
                             </div>
