@@ -1,9 +1,13 @@
 'use client'
 import Image from "next/image";
 import NavBottom from "./components/NavBottom";
+import dynamic from "next/dynamic";
+
+const ScriptLoader = dynamic(() => import('./components/ScriptLoader'), { ssr: false })
 export default function Home() {
   return (
     <>
+
       <div>
         {/* <div className="preloader">
           <div className="d-table">
@@ -15,7 +19,7 @@ export default function Home() {
 
         <div className="navbar-area" >
           <div className="mobile-nav">
-            <a href="index-2.html" className="logo">
+            <a href="/" className="logo">
               <Image width={100} height={100} src="/images/logo.png" className="logo" alt="Logo" style={{ width: '50px', height: "50", objectFit: "contain" }} />
             </a>
           </div>
@@ -1653,7 +1657,7 @@ export default function Home() {
                 <div className="col-lg-3 col-md-6">
                   <div className="footer-widget">
                     <div className="footer-logo">
-                      <a href="index-2.html">
+                      <a href="/">
                         <Image width={200} height={200} src="/images/logo.png" alt="Images" />
                       </a>
                     </div>
@@ -1810,6 +1814,7 @@ export default function Home() {
           </div>
         </footer>
       </div>
+      <ScriptLoader />
     </>
   );
 }

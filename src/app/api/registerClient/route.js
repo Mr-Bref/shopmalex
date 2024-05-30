@@ -11,9 +11,7 @@ export async function POST(request) {
 
 
     const { nompers, prenom, email, motdepasse } = await request.json();
-    console.log('====================================');
-    console.log(email);
-    console.log('====================================');
+
     try {
         const hashedPassword = await bcrypt.hash(motdepasse, 10);
 

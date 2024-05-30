@@ -9,7 +9,7 @@ function Footer() {
                     <div className="row">
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-widget">
-                                <div className="footer-logo"> <a href="index-2.html"> <Image src="/images/logo.png" alt="Images" width={100} height={100} /> </a> </div>
+                                <div className="footer-logo"> <a href="/"> <Image src="/images/logo.png" alt="Images" width={100} height={100} /> </a> </div>
                                 <p> Gravida nibh vel velit auctor aliquet. Aenean sollicit thudin, lorem the quis bibendum auctor, nisi elit consequat ipsum, nec sem nibh id elit. </p>
                                 <ul className="social-link">
                                     <li> <a href="#"><i className="lab la-facebook-f"></i></a> </li>

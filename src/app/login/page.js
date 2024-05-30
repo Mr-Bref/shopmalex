@@ -28,7 +28,7 @@ export default function Login() {
                         <h3>Connectez-vous</h3>
                         <ul>
                             <li>
-                                <Link href="index-2.html">Home</Link>
+                                <Link href="/">Home</Link>
                             </li>
                             <li>
                                 <i className="las la-angle-right"></i>

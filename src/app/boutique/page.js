@@ -17,7 +17,7 @@ function page() {
                         <h3>Boutique</h3>
                         <ul>
                             <li>
-                                <Link href="index-2.html">Home</Link>
+                                <Link href="/">Home</Link>
                             </li>
                             <li>
                                 <i className="las la-angle-right"></i>

@@ -17,9 +17,17 @@
   margin-left: auto;
   margin-right: auto;
 }
-.slider-ctainer {
-  min-height: 80vh;
+.slider-container {
+  min-height: 100vh;
+  overflow: hidden;
 }
 .slick-list {
   height: auto;
+}
+.nav-link {
+  font-size: 1.3rem;
+}
+
+.nav-link.active {
+  color: "#fb341f";
 }

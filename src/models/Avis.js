@@ -2,6 +2,7 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../lib/db';
 import Produit from './Produit';
 import Personne from './Personne';
+import Client from './Client';
 
 const Avis = sequelize.define('Avis', {
     idavis: {
@@ -32,6 +33,6 @@ const Avis = sequelize.define('Avis', {
 });
 
 Avis.belongsTo(Produit, { foreignKey: 'idprod' });
-Avis.belongsTo(Personne, { foreignKey: 'idpers' });
+Avis.belongsTo(Client, { foreignKey: 'idpers' });
 
 export default Avis;

@@ -8,7 +8,7 @@ export default function NotFound() {
                         <h3>404 page</h3>
                         <ul>
                             <li>
-                                <a href="index-2.html">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
                                 <i className="las la-angle-right"></i>
@@ -27,7 +27,7 @@ export default function NotFound() {
                             <h3>Oops! Page Not Found</h3>
                             <p>The page you are looking for might have been removed had its name changed or is temporarily
                                 unavailable.</p>
-                            <a href="index-2.html" className="default-btn">
+                            <a href="/" className="default-btn">
                                 Return To Home Page
                             </a>
                         </div>

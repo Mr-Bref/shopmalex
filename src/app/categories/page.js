@@ -10,7 +10,7 @@ function page() {
                         <h3>Categories</h3>
                         <ul>
                             <li>
-                                <a href="index-2.html">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
                                 <i class="las la-angle-right"></i>

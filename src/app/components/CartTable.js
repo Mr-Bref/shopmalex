@@ -8,8 +8,6 @@ function CartTable() {
         items,
     } = useCart();
 
-    console.log(items, isEmpty)
-
     return (
         <div className="cart-table table-responsive">
 

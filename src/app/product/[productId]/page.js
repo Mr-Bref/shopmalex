@@ -8,6 +8,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../tempstyle.css'
+import '@/app/assets/css/bootstrap.min.css'
 import { useCart } from 'react-use-cart'
 
 const ProductDetail = ({ params }) => {
@@ -15,7 +16,7 @@ const ProductDetail = ({ params }) => {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [activeTab, setActiveTab] = useState('Specifications');
+    const [activeTab, setActiveTab] = useState('Reviews');
     const [value, setValue] = useState('');
     const baseUrl = '/images/products';
     const { addItem } = useCart()
@@ -83,7 +84,7 @@ const ProductDetail = ({ params }) => {
 
     return (
         <div>
-            <div>
+            <div className='container'>
                 <div classname="inner-banner">
                     <div classname="container">
                         <div classname="inner-title text-center">
@@ -175,24 +176,24 @@ const ProductDetail = ({ params }) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 col-md-12">
-                                <div className="tabs">
-                                    <ul className="tab-list">
-                                        <li
+                                <div>
+                                    <ul className="nav justify-content-center">
+                                        {/* <li
                                             style={{ cursor: 'pointer' }}
-                                            className={activeTab === 'Specifications' ? 'active' : ''}
+                                            className={activeTab === 'Specifications' ? 'active nav-item nav-link' : 'nav-item nav-link'}
                                             onClick={() => setActiveTab('Specifications')}
                                         >
-                                            Specifications
-                                        </li>
+                                            Caractéristiques
+                                        </li> */}
                                         <li
                                             style={{ cursor: 'pointer' }}
-                                            className={activeTab === 'Reviews' ? 'active' : ''}
+                                            className={activeTab === 'Reviews' ? 'active nav-item nav-link' : 'nav-item nav-link'}
                                             onClick={() => setActiveTab('Reviews')}
                                         >
-                                            Reviews
+                                            Avis
                                         </li>
                                     </ul>
-                                    <TabContent activeTab={activeTab} />
+                                    <TabContent activeTab={activeTab} productId={productId} />
                                 </div>
                             </div>
                         </div>
@@ -402,5 +403,4 @@ const ProductDetail = ({ params }) => {
 
     );
 };
-
 export default ProductDetail;

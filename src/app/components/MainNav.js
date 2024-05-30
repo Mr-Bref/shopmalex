@@ -28,6 +28,7 @@ function MainNav() {
     const [selectedNavItem, setSelectedNavItem] = useState('')
     const { user, logout } = useAuth();
 
+
     const { totalUniqueItems } = useCart();
 
 
@@ -36,7 +37,7 @@ function MainNav() {
             <div className="container">
                 <nav className="navbar navbar-expand-md navbar-light">
                     <Link className="navbar-brand" href="/" style={{ color: "black" }}>
-                        Shop<span style={{ color: "orange" }}>Ma</span>lex
+                        Shop<span style={{ color: "#fb341f" }}>Malex</span>
                     </Link>
                     <div
                         className="collapse navbar-collapse mean-menu"

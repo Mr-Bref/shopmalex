@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import AddToCartButton from './AddToCartButton'
 import Link from 'next/link'
+import CustomKkiaPayButton from './CustomKkiaPayButton'
 
 function ProductCardC({ product }) {
     return (
@@ -19,6 +20,7 @@ function ProductCardC({ product }) {
                 </div>
                 <p>{product.category}</p>
                 <span>${product.price}</span>
+                <CustomKkiaPayButton amount={product.price} message={'buy'} />
                 <AddToCartButton item={product} />
             </div>
         </div>

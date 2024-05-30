@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 function FooterArea() {
     return (
         <><footer className="footer-area footer-bg">
@@ -8,11 +9,10 @@ function FooterArea() {
                     <div className="row">
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-widget">
-                                <div className="footer-logo">
-                                    <a href="index-2.html">
-                                        <Image height={100} alt="image" src="/images/logo.png" width={100} />
-
-                                    </a>
+                                <div className="footer-logo ">
+                                    <Link className="navbar-brand" href="/" style={{ color: "black" }}>
+                                        <b>Shop<span style={{ color: "#fb341f" }}>Malex</span></b>
+                                    </Link>
                                 </div>
                                 <p>
                                     Gravida nibh vel velit auctor aliquet. Aenean sollicit thudin,

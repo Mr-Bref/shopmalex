@@ -9,7 +9,7 @@ function page() {
           <div className="inner-title text-center">
             <h3>Contactez Nous</h3>
             <ul>
-              <li> <a href="index-2.html">Home</a> </li>
+              <li> <a href="/">Home</a> </li>
               <li> <i className="las la-angle-right"></i> </li>
               <li>Contactez Nous</li>
             </ul>

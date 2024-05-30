@@ -7,6 +7,11 @@ function AllScript({ hostname }) {
     return (
         <>
             <Script
+                src="https://cdn.kkiapay.me/k.js"
+                strategy="afterInteractive"
+                id='kkiapay' />
+
+            <Script
                 src={`${baseurl}jquery-3.5.1.slim.min.js`}
                 strategy="afterInteractive"
                 id='jquery'
