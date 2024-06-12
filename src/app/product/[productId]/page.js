@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../tempstyle.css'
 import '@/app/assets/css/bootstrap.min.css'
+import '@/app/assets/css/style.css'
 import { useCart } from 'react-use-cart'
 
 const ProductDetail = ({ params }) => {
@@ -61,7 +62,7 @@ const ProductDetail = ({ params }) => {
             return (
                 <a>
                     <Image
-                        src={`/images/${images[i].url}`}
+                        src={`/images${images[i].url}`}
                         alt={images[i].label}
                         width={100}
                         height={100}
@@ -113,7 +114,7 @@ const ProductDetail = ({ params }) => {
                                             {product.images.map((image, i) => (
                                                 <div key={i}>
                                                     <Image
-                                                        src={`/images/${image.url}`}
+                                                        src={`/images${image.url}`}
                                                         alt={image.libelle}
                                                         width={500}
                                                         height={500}

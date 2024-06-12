@@ -52,7 +52,7 @@ export default function Register() {
                   width={540}
                   height={400}
                   className='img-responsive'
-                  src="/images/user-img.jpg"
+                  src="/images/fruits.jpg"
                   alt="Images"
                   objectFit={'cover'}
                 />
@@ -125,8 +125,8 @@ export default function Register() {
                       </div>
                       <div className="col-12">
                         <p className="account-desc">
-                          Already have an account?
-                          <Link href="log-in.html">Log In</Link>
+                          Vous avez déja un compt?{"  "}
+                          <Link href="/login">Connectez-vous</Link>
                         </p>
                       </div>
                     </div>

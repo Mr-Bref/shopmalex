@@ -22,7 +22,7 @@ export async function GET(request, { params }) {
                 },
                 {
                     model: Image,
-                    attributes: ['cheminacces', 'libelle'],
+                    attributes: ['cheminacces', 'libelle', 'codeimage'],
                 },
             ],
         });
@@ -41,11 +41,10 @@ export async function GET(request, { params }) {
             images: product.Images.map(image => ({
                 url: image.cheminacces,
                 label: image.libelle,
+                id: image.codeimage
             })),
         };
-        console.log('====================================');
-        console.log(productData);
-        console.log('====================================');
+
 
         // Return the product data
         return NextResponse.json({ success: true, product: productData });
@@ -54,3 +53,7 @@ export async function GET(request, { params }) {
         return NextResponse.json({ success: false, error: error.message }, { status: 500 });
     }
 }
+
+
+
+

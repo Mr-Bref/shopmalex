@@ -48,7 +48,7 @@ export default function Login() {
                                     width={540}
                                     height={400}
                                     className='img-responsive'
-                                    src="/images/user-img.jpg"
+                                    src="/images/fruits.jpg"
                                     alt="Images"
                                     objectFit={'cover'}
                                 />
@@ -89,9 +89,9 @@ export default function Login() {
                                                 <div className="agree-label">
                                                     <input type="checkbox" id="chb1" />
                                                     <label htmlFor="chb1">
-                                                        Remember Me
+                                                        Se rappeler de moi
                                                         <Link className="forget" href="forget-password.html">
-                                                            Forgot My Password?</Link>
+                                                            Mot de pass Oublié?</Link>
 
                                                     </label>
                                                 </div>

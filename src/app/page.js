@@ -63,7 +63,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         <NavBottom />
 
         <div className="banner-style-area">
@@ -73,10 +72,10 @@ export default function Home() {
                 <div className="row">
                   <div className="col-lg-8">
                     <div className="content">
-                      <span>Easy to Take Good Food</span>
-                      <h1>Fresh Food Good Health</h1>
-                      <p>Order any food and it will be in your door</p>
-                      <a href="#" className="default-btn border-radius-5">Shop Now</a>
+                      <span>Une alimentation saine à portée de main</span>
+                      <h1>Des produits frais pour votre bien-être</h1>
+                      <p>Commandez vos aliments préférés et recevez-les directement chez vous</p>
+                      <a href="#" className="default-btn border-radius-5">Achetez maitenant</a>
                     </div>
                   </div>
                 </div>
@@ -90,10 +89,10 @@ export default function Home() {
                 <div className="row">
                   <div className="col-lg-8">
                     <div className="content">
-                      <span>Easy to Take Good Food</span>
-                      <h1>Source for fresh Food</h1>
-                      <p>Order any food and it will be in your door</p>
-                      <a href="#" className="default-btn border-radius-5">Shop Now</a>
+                      <span>La qualité à votre porte</span>
+                      <h1>Votre source de produits frais</h1>
+                      <p>Recevez des produits frais, livrés rapidement chez vous</p>
+                      <a href="#" className="default-btn border-radius-5">Commandez maitenant</a>
                     </div>
                   </div>
                 </div>
@@ -107,10 +106,10 @@ export default function Home() {
                 <div className="row">
                   <div className="col-lg-8">
                     <div className="content">
-                      <span>Easy to Take Good Food</span>
-                      <h1>Find all Daily Groceries</h1>
-                      <p>Order any food and it will be in your door</p>
-                      <a href="#" className="default-btn border-radius-5">Shop Now</a>
+                      <span>Votre épicerie en ligne</span>
+                      <h1>Trouvez tous vos produits quotidiens</h1>
+                      <p>Découvrez notre large sélection et faites-vous livrer en un clin d œil</p>
+                      <a href="#" className="default-btn border-radius-5">Explorer maitenant</a>
                     </div>
                   </div>
                 </div>

@@ -541,22 +541,23 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .icon-button-3d {
   display: flex;
-  box-shadow: 0 0 3px rgba(0,0,0,.1);
   color: #fff;
   background-color: transparent;
-  width: 12em;
-  transition: transform .2s ease;
+  width: auto;
+  transition: transform 0.2s ease;
   cursor: pointer;
   align-items: stretch;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   font-size: 14px;
+  border: #fb341f;
+  padding: 0;
 }
 
 .icon-button-3d > .text {
   line-height: 1;
   white-space: nowrap;
-  box-shadow: 0 .3em 0 0 #3B9E62;
+  box-shadow: 0 0.3em 0 0 #ffffff;
   text-align: left;
   min-width: min-content;
   text-transform: uppercase;
@@ -564,27 +565,29 @@ input[type="number"]::-webkit-outer-spin-button {
   border-bottom-left-radius: 5px;
   flex: 1;
   letter-spacing: 1px;
-  background-image: linear-gradient(180deg, #3B9E62, #3B9E62);
+  background-image: linear-gradient(180deg, #ffffff, #ffffff);
   border-top-left-radius: 5px;
 }
 
 .icon-button-3d:active {
-  transform: translateY(.2em);
+  transform: translateY(0.2em);
 }
 
 .icon-button-3d:active .text {
-  box-shadow: 0 .1em 0 0 #3B9E62;
+  box-shadow: 0 0.1em 0 0 #ffffff;
 }
 
-.icon-button-3d > .text, .icon-button-3d > .icon {
+.icon-button-3d > .text,
+.icon-button-3d > .icon {
   display: flex;
   align-items: center;
-  padding: .8em;
-  transition: box-shadow .2s ease;
+  padding: 0.8em;
+  padding-left: 0;
+  transition: box-shadow 0.2s ease;
 }
 
 .icon-button-3d > .icon svg {
-  fill: #3B9E62;
+  fill: #ffffff;
   width: 1.6em;
   height: 1.6em;
 }
@@ -594,11 +597,11 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: center;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
-  box-shadow: 0 .3em 0 0 #ddd;
+  box-shadow: 0 0.3em 0 0 #ddd;
 }
 
 .icon-button-3d:active .icon {
-  box-shadow: 0 .1em 0 0 #ddd;
+  box-shadow: 0 0.1em 0 0 #ddd;
 }
 
 .main-nav {
@@ -2091,8 +2094,8 @@ Best Deal Area
   line-height: 35px;
   font-size: 18px;
   text-align: center;
-  color: #ffbc2d;
-  background-color: #211e2f;
+  color: #fb341f;
+  background-color: #ffffff;
 }
 
 .best-deal-card .content .add-card:hover {
@@ -2960,16 +2963,21 @@ Product Area
 }
 
 .product-card .product-card-img {
-  background-color: #e1e1e1;
+  background-color: #ffffff;
   position: relative;
 }
 
 .product-card .product-card-img a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-card .product-card-img a img {
-  padding: 20px;
+  padding: 0;
+  object-fit: cover;
+  margin: 0 auto;
+  width: 100% !important;
 }
 
 .product-card .content {
@@ -3024,8 +3032,9 @@ Product Area
   line-height: 35px;
   font-size: 18px;
   text-align: center;
-  color: #ffbc2d;
-  background-color: #211e2f;
+  color: #fb341f;
+  background-color: #ffffff;
+  border: 1px solid #fb341f;
 }
 
 .product-card .content .add-card:hover {

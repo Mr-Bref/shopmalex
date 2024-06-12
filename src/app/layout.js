@@ -13,10 +13,11 @@ import './assets/css/meanmenu.css';
 import './assets/css/style.css';
 import './assets/css/responsive.css';
 import AllScript from "./components/AllScript";
-// import MainNav from "./components/MainNav";
+import { CustomProvider } from 'rsuite';
+import 'rsuite/dist/rsuite-no-reset.min.css';
 import FooterArea from "./components/FooterArea";
 import CardProviderWrapper from "./components/CardProviderWrapper";
-import { AuthProvider } from '../contexts/AuthContext';
+import { AuthProvider } from '../contexts/AuthProvider';
 import { headers } from "next/headers";
 import dynamic from "next/dynamic";
 const MainNav = dynamic(() => import('./components/MainNav'), { ssr: false })
@@ -38,13 +39,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <CardProviderWrapper>
-            <MainNav />
-            {children}
-            <FooterArea />
-          </CardProviderWrapper>
-        </AuthProvider>
+        <CustomProvider>
+          <AuthProvider>
+            <CardProviderWrapper>
+              <MainNav />
+              {children}
+              <FooterArea />
+            </CardProviderWrapper>
+          </AuthProvider>
+        </CustomProvider>
         <AllScript hostname={hostname} />
       </body>
     </html>

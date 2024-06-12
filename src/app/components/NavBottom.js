@@ -14,7 +14,7 @@ function NavBottom() {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="form-group search-form">
-                                            <input className="form-control" placeholder="Find Your Product" type="text" />
+                                            <input className="form-control" placeholder="Recherchez un produit" type="text" />
                                         </div>
                                     </div>
                                     <div className="col-lg-5">

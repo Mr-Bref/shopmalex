@@ -1,11 +1,18 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 function FooterArea() {
-    return (
+
+    const pathname = usePathname();
+    const isAdminRoute = pathname.startsWith('/admin')
+
+
+    return (!isAdminRoute ?
         <><footer className="footer-area footer-bg">
-            <div className="container">
-                <div className="footer-top pt-100 pb-70">
+            <div className="container" >
+                <div className="footer-top pt-100 pb-70" style={{ margin: "0 auto" }}>
                     <div className="row">
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-widget">
@@ -21,77 +28,64 @@ function FooterArea() {
                                 </p>
                                 <ul className="social-link">
                                     <li>
-                                        <a href="#">
+                                        <Link href="#">
                                             <i className="lab la-facebook-f">
                                             </i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="#">
                                             <i className="lab la-twitter">
                                             </i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="#">
                                             <i className="lab la-instagram">
                                             </i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="#">
                                             <i className="lab la-youtube">
                                             </i>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-4 col-md-8">
                             <div className="footer-widget ml-30">
                                 <h3>
-                                    Quick Links
+                                    Lien Rapide
                                 </h3>
                                 <ul className="footer-list">
                                     <li>
-                                        <a href="shop.html">
-                                            New Collection
-                                        </a>
+                                        <Link href="shop.html">
+                                            Nouvelle Collection
+                                        </Link>
                                     </li>
+
                                     <li>
-                                        <a href="shop.html">
-                                            Best Deal
-                                        </a>
+                                        <Link href="shop.html">
+                                            Boutique
+                                        </Link>
                                     </li>
+
                                     <li>
-                                        <a href="shop.html">
-                                            Discount &amp; Offer
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">
-                                            Hot Sale
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">
-                                            All Products
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="account.html">
+                                        <Link href="account.html">
                                             Account
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            Wish List
-                                        </a>
+                                        <Link href="#">
+                                            Panier
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6">
+                        {/* <div className="col-lg-4 col-md-6">
                             <div className="footer-widget ml-40">
                                 <h3>
                                     Our Blog
@@ -102,9 +96,9 @@ function FooterArea() {
 
                                         <div className="content">
                                             <h3>
-                                                <a href="blog-details.html">
+                                                <Link href="blog-details.html">
                                                     Digital Light Invention by Denis
-                                                </a>
+                                                </Link>
                                             </h3>
                                             <span>
                                                 04 Dec 2020
@@ -116,9 +110,9 @@ function FooterArea() {
 
                                         <div className="content">
                                             <h3>
-                                                <a href="blog-details.html">
+                                                <Link href="blog-details.html">
                                                     Product Selling Strategy
-                                                </a>
+                                                </Link>
                                             </h3>
                                             <span>
                                                 07 Dec 2020
@@ -130,9 +124,9 @@ function FooterArea() {
 
                                         <div className="content">
                                             <h3>
-                                                <a href="blog-details.html">
+                                                <Link href="blog-details.html">
                                                     Find the Best Product in Market
-                                                </a>
+                                                </Link>
                                             </h3>
                                             <span>
                                                 10 Dec 2020
@@ -141,11 +135,11 @@ function FooterArea() {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-widget pl-5">
                                 <h3>
-                                    Contact Us
+                                    Contactez Nous
                                 </h3>
                                 <ul className="footer-address">
                                     <li>
@@ -153,11 +147,9 @@ function FooterArea() {
                                         </i>
                                         <div className="content">
                                             <h3>
-                                                6B Green Hill, Barista, USA
+                                                Cotonou, Benin
                                             </h3>
-                                            <span>
-                                                Our Location
-                                            </span>
+
                                         </div>
                                     </li>
                                     <li>
@@ -165,9 +157,9 @@ function FooterArea() {
                                         </i>
                                         <div className="content">
                                             <h3>
-                                                <a href="tel:+1-432-675-896">
-                                                    +1 432 675 896
-                                                </a>
+                                                <Link href="tel:+229 61561990">
+                                                    +229 61561990
+                                                </Link>
                                             </h3>
                                             <span>
                                                 Phone Number
@@ -179,29 +171,18 @@ function FooterArea() {
                                         </i>
                                         <div className="content">
                                             <h3>
-                                                <a href="//email-protection#40292e262f002c2f2d2132346e232f2d">
+                                                <Link href="//email-protection#40292e262f002c2f2d2132346e232f2d">
                                                     <span className="__cf_email__" data-cfemail="0d64636b624d6162606c7f79236e6260">
                                                         example.com
                                                     </span>
-                                                </a>
+                                                </Link>
                                             </h3>
                                             <span>
                                                 Our Email
                                             </span>
                                         </div>
                                     </li>
-                                    <li>
-                                        <i className="las la-clock">
-                                        </i>
-                                        <div className="content">
-                                            <h3>
-                                                9 AM - 5 PM (7 Days)
-                                            </h3>
-                                            <span>
-                                                Open Hour
-                                            </span>
-                                        </div>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -210,17 +191,15 @@ function FooterArea() {
                 <div className="copy-right-area">
                     <div className="copy-right-text">
                         <p>
-                            Copyright ©2021 Lomart. All Rights Reserved by
-                            <a href="">
-                                Skera Theme
-                            </a>
+                            Copyright ©2024 Shopmalex. Tout droit reservés
+
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
         </>
-    )
+        : null)
 }
 
 export default FooterArea
