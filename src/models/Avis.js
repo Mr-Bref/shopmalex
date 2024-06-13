@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../lib/db';
 import Produit from './Produit';
-import Personne from './Personne';
 import Client from './Client';
 
 const Avis = sequelize.define('Avis', {
@@ -26,7 +25,7 @@ const Avis = sequelize.define('Avis', {
     idpers: {
         type: DataTypes.INTEGER,
         references: {
-            model: Personne,
+            model: Client,
             key: 'idpers',
         },
     },
@@ -34,5 +33,7 @@ const Avis = sequelize.define('Avis', {
 
 Avis.belongsTo(Produit, { foreignKey: 'idprod' });
 Avis.belongsTo(Client, { foreignKey: 'idpers' });
+Produit.hasMany(Avis, { foreignKey: 'idprod' });
+Client.hasMany(Avis, { foreignKey: 'idpers' });
 
 export default Avis;

@@ -41,4 +41,5 @@ const Produit = sequelize.define('Produit', {
 
 Produit.belongsTo(Categorie, { foreignKey: 'codcat' });
 
+
 export default Produit;

@@ -10,9 +10,16 @@ function RecommendedProducts() {
         // Fetch products for the category
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`/api/recommendation`);
+                const response = await fetch(`/api/recommendation`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ productId: 3 })
+                });
                 const data = await response.json();
                 setProducts(data.products);
+
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
