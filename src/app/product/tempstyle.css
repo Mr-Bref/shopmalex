@@ -31,3 +31,32 @@
 .nav-link.active {
   color: "#fb341f";
 }
+.star .star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.star.active {
+  color: gold;
+}
+
+.rating-container {
+  display: flex;
+}
+
+.star:hover,
+.star:has(~ .star:hover) {
+  color: gold;
+}
+
+.disabled {
+  font-size: 30px;
+  cursor: default;
+  pointer-events: none;
+}

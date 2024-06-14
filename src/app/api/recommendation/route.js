@@ -11,10 +11,6 @@ export async function POST(request) {
     try {
         const { productId } = request.json()
 
-        console.log('====================================');
-        console.log(productId);
-        console.log('====================================');
-
         const url = `http://localhost:5000/recommend?item_id=${productId || 2}&top_n=6`
         // Check if the data is already loaded
         const response = await fetch(url);

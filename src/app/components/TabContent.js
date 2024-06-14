@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
+import StarRating from "./StarRating";
 
 export default function TabContent({ activeTab, productId }) {
     const [productData, setProductData] = useState(null);
@@ -9,6 +10,8 @@ export default function TabContent({ activeTab, productId }) {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+    const [rating, setRating] = useState(0);
+
 
     useEffect(() => {
         fetchProductData();
@@ -31,6 +34,11 @@ export default function TabContent({ activeTab, productId }) {
         }
     };
 
+    const setRate = (r) => {
+        setRating(r)
+        console.log(rating)
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -42,11 +50,12 @@ export default function TabContent({ activeTab, productId }) {
                 },
                 body: JSON.stringify({
                     commentaire: review,
-                    note: 5, // Assuming a static rating for now, you might want to make it dynamic
+                    note: rating, // Assuming a static rating for now, you might want to make it dynamic
                     productId,
                     firstName,
                     lastName,
                     email,
+
                 }),
             });
 
@@ -58,6 +67,7 @@ export default function TabContent({ activeTab, productId }) {
                 setLastName('')
                 setReview('')
                 fetchProductData()
+                setRating(0)
             } else {
                 // Handle error
                 console.error('Error submitting review');
@@ -95,9 +105,7 @@ export default function TabContent({ activeTab, productId }) {
                             <div key={comment.id} className="review-item">
                                 <h3>{comment.author}</h3>
                                 <div className="rating">
-                                    {[...Array(5)].map((_, i) => (
-                                        <i key={i} className={`las la-star${i < comment.note ? '' : '-half-alt'}`}></i>
-                                    ))}
+                                    <StarRating className='disabled-star' disabled rating={comment.note || 0} />
                                 </div>
                                 <p>{comment.commentaire}</p>
                             </div>
@@ -105,6 +113,7 @@ export default function TabContent({ activeTab, productId }) {
                     </div>
                     <div className="review-form">
                         <h3>Add Your Review</h3>
+                        <StarRating setRate={setRate} rating={rating} />
                         <form id="reviewForm" onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label>First Name<span>*</span></label>
