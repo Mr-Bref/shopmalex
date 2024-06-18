@@ -30,7 +30,7 @@ function StarRating({ setRate, rating, disabled }) {
     }
 
     return (
-        <div className="rating-container">
+        <div style={{ padding: 0, margin: 0 }} className="rating-container">
             <Stars />
         </div>
     )

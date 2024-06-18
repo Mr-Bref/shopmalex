@@ -67,7 +67,7 @@ export async function GET(request, { params }) {
 
 
 export async function POST(request) {
-    const { commentaire, note, productId, firstName, lastName, email } = await request.json();
+    const { commentaire, note, productId, email } = await request.json();
 
     try {
         // Find or create the person (you may want to adjust this logic)

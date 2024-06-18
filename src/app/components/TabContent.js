@@ -7,8 +7,7 @@ export default function TabContent({ activeTab, productId }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [review, setReview] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+
     const [email, setEmail] = useState('');
     const [rating, setRating] = useState(0);
 
@@ -52,8 +51,6 @@ export default function TabContent({ activeTab, productId }) {
                     commentaire: review,
                     note: rating, // Assuming a static rating for now, you might want to make it dynamic
                     productId,
-                    firstName,
-                    lastName,
                     email,
 
                 }),
@@ -63,8 +60,7 @@ export default function TabContent({ activeTab, productId }) {
                 // Handle success (e.g., display a success message or clear the form)
                 console.log('Review submitted successfully');
                 setEmail('')
-                setFirstName('')
-                setLastName('')
+
                 setReview('')
                 fetchProductData()
                 setRating(0)
@@ -98,15 +94,15 @@ export default function TabContent({ activeTab, productId }) {
                                 <i key={i} className={`las la-star${i < Math.floor(productData.averageRating) ? '' : '-half-alt'}`}></i>
                             ))}
                         </div>
-                        <p>{productData.totalComments} Ratings</p>
+                        <p>{productData.totalComments} Avis</p>
                     </div>
                     <div className="review-list">
                         {productData.comments.map(comment => (
                             <div key={comment.id} className="review-item">
-                                <h3>{comment.author}</h3>
-                                <div className="rating">
+                                <h4 style={{ padding: 0, margin: 0 }}>{comment.author}</h4>
+                                <span className="rating" style={{ padding: 0, margin: 0 }} >
                                     <StarRating className='disabled-star' disabled rating={comment.note || 0} />
-                                </div>
+                                </span>
                                 <p>{comment.commentaire}</p>
                             </div>
                         ))}
@@ -115,30 +111,9 @@ export default function TabContent({ activeTab, productId }) {
                         <h3>Add Your Review</h3>
                         <StarRating setRate={setRate} rating={rating} />
                         <form id="reviewForm" onSubmit={handleSubmit}>
+
                             <div className="form-group">
-                                <label>First Name<span>*</span></label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="First Name"
-                                    value={firstName}
-                                    onChange={(e) => setFirstName(e.target.value)}
-                                    required
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label>Last Name<span>*</span></label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Last Name"
-                                    value={lastName}
-                                    onChange={(e) => setLastName(e.target.value)}
-                                    required
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label>Your Email<span>*</span></label>
+                                <label>Email<span>*</span></label>
                                 <input
                                     type="email"
                                     className="form-control"
@@ -149,7 +124,7 @@ export default function TabContent({ activeTab, productId }) {
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Your Review<span>*</span></label>
+                                <label>Votre commentaire<span>*</span></label>
                                 <textarea
                                     name="review"
                                     className="form-control"
@@ -160,7 +135,7 @@ export default function TabContent({ activeTab, productId }) {
                                     required
                                 ></textarea>
                             </div>
-                            <button type="submit" className="btn">Send Message</button>
+                            <button type="submit" className="btn">Envoyer</button>
                         </form>
                     </div>
                 </div>

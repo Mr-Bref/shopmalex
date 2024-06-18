@@ -4,6 +4,7 @@ import Avis from '@/models/Avis';
 import Client from '@/models/Client';
 import Image from '@/models/Image';
 import sequelize from '../../../lib/db';
+import { loadData, fetchRecommendations } from '@/lib/flaskApi';
 sequelize.authenticate();
 
 
@@ -11,10 +12,11 @@ export async function POST(request) {
     try {
         const { productId } = request.json()
 
-        const url = `http://localhost:5000/recommend?item_id=${productId || 2}&top_n=6`
+        const url = `http://localhost:5000//recommend?item_id=${1}&user_id=${2}&top_n=${6}`
         // Check if the data is already loaded
         const response = await fetch(url);
         const responsejson = await response.json();
+
         const { success, error } = responsejson;
 
         // If the data is not loaded, load it first
@@ -45,7 +47,7 @@ export async function POST(request) {
                 reviews: products.map(product => product.Avis.map(review => ({
                     id: review.idavis,
                     comment: review.commentaire,
-                    rating: review.note,
+                    rating: parseInt(review.note, 10),
                     reviewer: {
                         id: review.Client.idpers,
                     },
@@ -53,32 +55,25 @@ export async function POST(request) {
             };
 
 
-
-
             // Load the data into the Flask recommendation engine
-            await fetch('http://localhost:5000/load_data', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    dataset: productData,
-                    features: ['name', 'description'],
-                }),
-            });
+            await loadData(productData, ['id', 'description'])
 
             console.log('Data loaded successfully.');
         }
 
-        // Get the product ID from the request query
-        // const { productId } = request.nextUrl.searchParams;
-
         // Fetch the recommendations from the Flask recommendation engine
+        let recommendations
+        try {
+            recommendations = await fetchRecommendations(url);
 
-        const recommendationResponse = await fetch(url);
+            // Process the recommendation response here
+            console.log('Recommendations:', recommendations);
 
+        } catch (error) {
+            console.error('Error fetching recommendations:', error.message);
+            // Handle error here, e.g., show error message to user
+        }
 
-        const recommendations = await recommendationResponse.json();
 
         const recommendedProducts = await Produit.findAll({
             where: {

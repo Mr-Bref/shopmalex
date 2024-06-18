@@ -86,22 +86,22 @@ const ProductDetail = ({ params }) => {
     return (
         <div>
             <div className='container'>
-                <div classname="inner-banner">
-                    <div classname="container">
-                        <div classname="inner-title text-center">
-                            <h3>Shop Details</h3>
-                            <ul>
-                                <li>
-                                    <link href='/' />Home
-                                </li>
-                                <li>
-                                    <i classname="las la-angle-right" />
-                                </li>
-                                <li>Details</li>
-                            </ul>
-                        </div>
+
+                <div className="container">
+                    <div className="inner-title text-center">
+                        <h3>Boutique</h3>
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <i className="las la-angle-right"></i>
+                            </li>
+                            <li>Boutique</li>
+                        </ul>
                     </div>
                 </div>
+
 
 
                 <div className="shop-details-area pt-100 pb-70">

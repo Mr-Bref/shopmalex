@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { productInfo } from '../data/product'
 import RecommendedProducts from '../components/Rcommended'
-import { recommendedProductInfo } from '../data/recommended'
 function page() {
 
     return (
@@ -112,7 +111,7 @@ function page() {
                 </div>
             </div>
 
-            <RecommendedProducts products={recommendedProductInfo} />
+            <RecommendedProducts />
 
 
         </>
